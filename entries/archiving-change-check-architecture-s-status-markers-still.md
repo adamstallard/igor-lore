@@ -3,7 +3,7 @@ id: archiving-change-check-architecture-s-status-markers-still
 claim: When archiving a change, check that the architecture's status markers still
   describe reality.
 scope: global
-status: provisional
+status: active
 conditions:
   paths:
     - openspec/**
@@ -14,6 +14,9 @@ provenance:
     author: adamstallard
     at: 2026-09-14
 supersedes: []
+reviewed:
+  by: adamstallard
+  at: 2026-09-14
 ---
 
 Status recorded in two places drifts, and the copy nobody edits goes quiet rather than wrong. Thirteen sections sat marked scoped or planned for work that had shipped, and the README announced that only the lore half existed while the whole loop was running against live repositories.
