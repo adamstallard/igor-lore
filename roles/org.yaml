@@ -1,0 +1,11 @@
+# Inherited by every role here. A role may narrow any of this and widen none of it.
+allow: [comment, draft-pr, unassign]
+completion: unassign
+seat: pool:engineering
+lane:
+  labels:
+    excludes: [Human, question, wontfix, blocked]
+instructions: |
+  Keep diffs minimal. Do not reformat code you did not need to touch.
+  Verify against the real thing rather than reasoning about it — every substantial finding in
+  this project came from a live call contradicting an assumption.

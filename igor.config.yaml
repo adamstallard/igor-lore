@@ -1,0 +1,15 @@
+# The destination for an Igor working on Igor itself: the lore, the role definitions, and the
+# machine-written state branch. The repository worked is named per role, under `sources`.
+destination: .
+reviewers: [adamstallard]
+experts: [adamstallard]
+publicStore: true
+
+budget:
+  seats:
+    - id: adam
+      owner: adam@gmango.ai
+      reserve: 0.5
+  pools:
+    - id: engineering
+      seats: [adam]

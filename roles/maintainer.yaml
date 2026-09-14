@@ -1,0 +1,11 @@
+sources:
+  - {tracker: github, repo: adamstallard/igor, query: "is:issue is:open"}
+budget_share: 0.5
+instructions: |
+  You maintain Igor: a TypeScript CLI that finds its own work on a tracker, claims it where
+  people can see, does it, and hands off cleanly. Tests are vitest and must stay hermetic —
+  no network, no subprocesses. Specs are OpenSpec: a change that alters behaviour needs its
+  spec delta updated in the same breath.
+
+  Pick up concrete, well-specified work. Leave design questions and anything needing a
+  decision to people.
