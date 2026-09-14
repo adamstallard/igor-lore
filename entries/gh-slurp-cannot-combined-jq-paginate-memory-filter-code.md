@@ -2,7 +2,7 @@
 id: gh-slurp-cannot-combined-jq-paginate-memory-filter-code
 claim: gh --slurp cannot be combined with --jq. Paginate into memory and filter in code.
 scope: global
-status: provisional
+status: active
 conditions:
   paths:
     - src/*.ts
@@ -12,6 +12,9 @@ provenance:
     author: adamstallard
     at: 2026-09-13
 supersedes: []
+reviewed:
+  by: adamstallard
+  at: 2026-09-14
 ---
 
 Pages arrive as an array of arrays, so the caller flattens before filtering.

@@ -3,7 +3,7 @@ id: promisified-execfile-silently-ignores-input-option-so
 claim: Promisified execFile silently ignores an input option, so anything reading stdin
   hangs forever. Spawn and write to stdin instead.
 scope: global
-status: provisional
+status: active
 conditions:
   paths:
     - src/**/*.ts
@@ -14,6 +14,9 @@ provenance:
     author: adamstallard
     at: 2026-09-13
 supersedes: []
+reviewed:
+  by: adamstallard
+  at: 2026-09-14
 ---
 
 The `input` option belongs to `execFileSync`, not to `execFile`. The promisified form accepts it, ignores it, and the child waits on input that never arrives — so the failure is a hang rather than an error, which is the expensive kind to diagnose.

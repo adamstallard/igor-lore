@@ -3,7 +3,7 @@ id: under-exactoptionalpropertytypes-assigning-possibly
 claim: Under exactOptionalPropertyTypes, assigning a possibly-undefined value to an
   optional property is an error. Spread the key conditionally instead.
 scope: global
-status: provisional
+status: active
 conditions:
   paths:
     - src/**/*.ts
@@ -13,6 +13,9 @@ provenance:
     author: adamstallard
     at: 2026-09-13
 supersedes: []
+reviewed:
+  by: adamstallard
+  at: 2026-09-14
 ---
 
 `{ x: maybeUndefined }` fails where `{ ...(v === undefined ? {} : { x: v }) }` passes. The pattern recurs throughout this codebase; matching it is cheaper than relaxing the compiler setting.
