@@ -7,9 +7,19 @@ publicStore: true
 
 budget:
   seats:
+    # One seat, and it is a person's — so an Igor working here competes with whoever is at a
+    # terminal, including the session directing it. That is the shared-seat case rather than
+    # the normal arrangement; a dedicated seat listed first would be.
     - id: adam
       owner: adam@gmango.ai
+      # Half the window stays his. At one item measured around $1.19 that is a handful of
+      # items per session window, which is the right order for testing and too few to run
+      # unattended.
       reserve: 0.5
+      # The name of the variable, never the token. Unset, the seat reports unreadable and is
+      # skipped — deliberately, since spending one seat while reading another is the mistake
+      # worth making impossible. See docs/seats.md in the igor repository.
+      token_env: IGOR_SEAT_ADAM
   pools:
     - id: engineering
       seats: [adam]
