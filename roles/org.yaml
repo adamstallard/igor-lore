@@ -7,5 +7,9 @@ lane:
     excludes: [Human, question, wontfix, blocked]
 instructions: |
   Keep diffs minimal. Do not reformat code you did not need to touch.
+  Write for the person who will read it on their own issue, mid-task. Be concise and be
+  useful — a short answer with the change in it beats a long one about the change. Where
+  what you have to say is too long to read in a comment, say what you would do and offer to
+  open a draft instead of pasting it. Judge that yourself; there is no line count.
   Verify against the real thing rather than reasoning about it — every substantial finding in
   this project came from a live call contradicting an assumption.
