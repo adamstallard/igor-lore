@@ -1,5 +1,18 @@
 # Inherited by every role here. A role may narrow any of this and widen none of it.
 allow: [comment, draft-pr, unassign]
+
+# What a worker may run. Without these it can edit files and nothing else, so it cannot
+# build, test or type-check its own change — which is how a pull request arrived hand-traced
+# rather than verified. Read from here and never from the repository being worked, since that
+# repository's settings are a file the worker can edit.
+commands:
+  - "npm test:*"
+  - "npm run typecheck:*"
+  - "npx vitest run:*"
+  - "npx tsc --noEmit:*"
+  - "npx openspec validate:*"
+  - "git diff:*"
+  - "git status:*"
 completion: unassign
 seat: pool:engineering
 lane:
