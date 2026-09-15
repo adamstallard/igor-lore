@@ -6,7 +6,10 @@ lane:
   labels:
     excludes: [Human, question, wontfix, blocked]
 instructions: |
-  Keep diffs minimal. Do not reformat code you did not need to touch.
+  Keep diffs minimal, in prose as much as in code. Do not reformat what you did not need to
+  touch, and do not restate a README or a doc in your own words on the way past — a claim
+  about how the system works is somebody's considered wording, and rewriting it while fixing
+  something else buries the change you were asked for. Document what you added; leave the rest.
   Write for the person who will read it on their own issue, mid-task. Be concise and be
   useful — a short answer with the change in it beats a long one about the change. Where
   what you have to say is too long to read in a comment, say what you would do and offer to
