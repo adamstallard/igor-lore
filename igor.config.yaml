@@ -5,21 +5,16 @@ reviewers: [adamstallard]
 experts: [adamstallard]
 publicStore: true
 
-budget:
-  seats:
-    # One seat, and it is a person's — so an Igor working here competes with whoever is at a
-    # terminal, including the session directing it. That is the shared-seat case rather than
-    # the normal arrangement; a dedicated seat listed first would be.
-    - id: adam
-      owner: adam@gmango.ai
-      # Half the window stays his. At one item measured around $1.19 that is a handful of
-      # items per session window, which is the right order for testing and too few to run
-      # unattended.
-      reserve: 0.5
-      # The name of the variable, never the token. Unset, the seat reports unreadable and is
-      # skipped — deliberately, since spending one seat while reading another is the mistake
-      # worth making impossible. See docs/seats.md in the igor repository.
-      token_env: IGOR_SEAT_ADAM
-  pools:
-    - id: engineering
-      seats: [adam]
+# No `budget` block, deliberately, and not because budgeting does not matter here.
+#
+# A seat's remaining window is read with `claude -p /usage`, which answers a `setup-token`
+# credential with a cost summary instead of window percentages. Measured: the same command on
+# the same machine returns "Current session: 17% used" for an interactive login and
+# "Total cost: $0.0000" for a seat token. So any seat declared the documented way reports
+# unreadable, the pool reports no headroom, and nothing is ever claimed.
+# adamstallard/igor#30.
+#
+# With no seats, budget is not enforced and the worker runs on CLAUDE_CODE_OAUTH_TOKEN from the
+# environment. The cost is the reserve: nothing now stops an Igor spending the whole window, so
+# work items one at a time with `igor run <role> --claim <id>` rather than leaving `serve`
+# running. Restore the block, and `seat:` in roles/org.yaml, once #30 is resolved.

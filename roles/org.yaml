@@ -14,7 +14,7 @@ commands:
   - "git diff:*"
   - "git status:*"
 completion: unassign
-seat: pool:engineering
+# No `seat:` while no seats are declared — see igor.config.yaml.
 lane:
   labels:
     excludes: [Human, question, wontfix, blocked]
