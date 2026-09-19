@@ -27,7 +27,9 @@ commands:
   - "head:*"
   - "wc:*"
 completion: unassign
-# No `seat:` while no seats are declared — see igor.config.yaml.
+# Every role must name a seat wherever seats are declared, so this is inherited rather than
+# repeated. One seat today; a role drawing on a different subscription overrides it.
+seat: adam
 lane:
   labels:
     excludes: [Human, question, wontfix, blocked]
