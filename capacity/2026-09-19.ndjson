@@ -3,3 +3,4 @@
 {"at":"2026-09-19T04:28:55.803Z","seat":"adam","window":"week","percentUsed":0,"resetsAt":"2026-09-25T23:00:00.000Z","resetsPhrase":"Sep 25 at 4pm (America/Los_Angeles)","source":"usage","model":"Fable"}
 {"at":"2026-09-19T05:08:50.158Z","seat":"adam","window":"session","percentUsed":12,"resetsAt":"2026-09-19T09:20:00.000Z","resetsPhrase":"Sep 19 at 2:20am (America/Los_Angeles)","source":"usage"}
 {"at":"2026-09-19T05:08:50.158Z","seat":"adam","window":"week","percentUsed":7,"resetsAt":"2026-09-25T23:00:00.000Z","resetsPhrase":"Sep 25 at 4pm (America/Los_Angeles)","source":"usage"}
+{"at":"2026-09-19T05:08:50.158Z","seat":"adam","window":"week","percentUsed":0,"resetsAt":"2026-09-25T23:00:00.000Z","resetsPhrase":"Sep 25 at 4pm (America/Los_Angeles)","source":"usage","model":"Fable"}
