@@ -13,4 +13,4 @@ budget:
       capacity_estimate:
         session: 100
         week: 3000
-      token_command: security find-generic-password -a "$USER" -s igor-seat-adam -w
+      token_command: security find-generic-password -a "$USER" -s claude-adam-personal -w
