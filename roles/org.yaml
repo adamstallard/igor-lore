@@ -26,7 +26,6 @@ commands:
   - "tail:*"
   - "head:*"
   - "wc:*"
-completion: unassign
 # Every role must name a seat wherever seats are declared, so this is inherited rather than
 # repeated. One seat today; a role drawing on a different subscription overrides it.
 seat: adam
